@@ -1227,6 +1227,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.665
       objectReference: {fileID: 0}
+    - target: {fileID: 1942022178070921292, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
+      propertyPath: maxSize
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942022178070921292, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
+      propertyPath: minSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942022178070921292, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
+      propertyPath: maxSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942022178070921292, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
+      propertyPath: minSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3746684280046317292, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
       propertyPath: m_Name
       value: Obstacle
