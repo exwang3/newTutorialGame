@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
     Rigidbody2D rb;
+    private float elapsedTime = 0f;
+    private float score = 0f;
+    public float scoreMultiplier = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +19,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    elapsedTime += Time.deltaTime;
+    score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+    Debug.Log("Score: " + score);    
     if (Mouse.current.leftButton.isPressed)
         {
             //calculate mouse direction
