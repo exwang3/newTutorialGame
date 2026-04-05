@@ -2094,6 +2094,7 @@ MonoBehaviour:
   thrustForce: 2
   maxSpeed: 5
   scoreMultiplier: 10
+  uiDocument: {fileID: 594539592}
 --- !u!4 &1697049088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1485761687421640343, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}
