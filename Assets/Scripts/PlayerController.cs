@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float scoreMultiplier = 10f;
     public UIDocument uiDocument;
     private Label scoreText;
+    public GameObject explosionEffect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,10 +24,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    elapsedTime += Time.deltaTime;
-    score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
-    scoreText.text = "Score: " + score;
-    Debug.Log("Score: " + score);    
+        UpdateScore();
+        MovePlayer();
+    }
+    void UpdateScore()
+    {
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+        scoreText.text = "Score: " + score;
+    }
+    void MovePlayer()
+    {
     if (Mouse.current.leftButton.isPressed)
         {
             //calculate mouse direction
@@ -52,6 +60,7 @@ public class PlayerController : MonoBehaviour
     //destroy player on collision
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

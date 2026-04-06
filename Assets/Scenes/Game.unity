@@ -311,7 +311,7 @@ Transform:
   m_GameObject: {fileID: 280879579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.00060273, y: -0.719, z: 0}
+  m_LocalPosition: {x: 0.00060273, y: -0.832, z: 0}
   m_LocalScale: {x: 0.4295654, y: 0.40271753, z: 0.4295654}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2095,6 +2095,7 @@ MonoBehaviour:
   maxSpeed: 5
   scoreMultiplier: 10
   uiDocument: {fileID: 594539592}
+  explosionEffect: {fileID: 4859617604678136523, guid: 3c45ca4e997d69547a6aa50d410d4321, type: 3}
 --- !u!4 &1697049088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1485761687421640343, guid: e6d36e7c4924b8f449c7948fcde9d585, type: 3}

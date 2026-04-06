@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad124abef5d364408a39c726daf5493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  maxSpinSpeed: 10
   minSize: 0.6
   maxSize: 2.25
   minSpeed: 100
