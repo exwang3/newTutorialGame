@@ -191,3 +191,4 @@ MonoBehaviour:
   maxSize: 2.25
   minSpeed: 100
   maxSpeed: 160
+  bounceEffectPrefab: {fileID: 7301849485263573290, guid: 6e7335bab309b784eb509d19d19f25b2, type: 3}
