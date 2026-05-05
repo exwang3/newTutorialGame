@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3746684280046317292}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.6988235, w: 0.71529424}
+  m_LocalRotation: {x: 0, y: 0, z: -0.69882107, w: 0.71529657}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   m_Color: {r: 0.5311944, g: 0.5654084, b: 0.6509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,7 +159,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 2.14, y: 1.74}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,12 +167,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+    - - {x: 0.65, y: -0.83}
+      - {x: 1.0699999, y: -0.32999998}
+      - {x: 1.0699999, y: 0.11}
+      - {x: 0.90999997, y: 0.37}
+      - {x: 0.47, y: 0.65}
+      - {x: 0.22999999, y: 0.66999996}
+      - {x: 0.17, y: 0.87}
+      - {x: -0.14999999, y: 0.87}
+      - {x: -0.19, y: 0.81}
+      - {x: -0.59, y: 0.78999996}
+      - {x: -0.66999996, y: 0.71}
+      - {x: -0.65, y: 0.61}
+      - {x: -1.0699999, y: 0.21}
+      - {x: -1.0699999, y: -0.47}
+      - {x: -0.93, y: -0.65}
+      - {x: -0.71, y: -0.78999996}
+      - {x: -0.63, y: -0.87}
+      - {x: 0.55, y: -0.87}
   m_UseDelaunayMesh: 1
 --- !u!114 &1942022178070921292
 MonoBehaviour:
@@ -187,8 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   maxSpinSpeed: 10
-  minSize: 0.6
-  maxSize: 2.25
-  minSpeed: 100
-  maxSpeed: 160
+  minSize: 0.5
+  maxSize: 1.5
+  minSpeed: 50
+  maxSpeed: 150
   bounceEffectPrefab: {fileID: 7301849485263573290, guid: 6e7335bab309b784eb509d19d19f25b2, type: 3}
