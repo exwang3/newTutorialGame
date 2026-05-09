@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     private float elapsedTime = 0f;
     private float score = 0f;
+    private float highScore = 0f;
     public float scoreMultiplier = 10f;
     public UIDocument uiDocument;
     private Label scoreText;
+    private Label highScoreText;
     public GameObject explosionEffect;
     private Button restartButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,8 +23,11 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        highScoreText = uiDocument.rootVisualElement.Q<Label>("HighScoreLabel");
+        highScoreText.style.display = DisplayStyle.None;
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
+        //this is just to reload the game?:...
         restartButton.clicked += ReloadScene;
     }
 
@@ -37,6 +42,22 @@ public class PlayerController : MonoBehaviour
         elapsedTime += Time.deltaTime;
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
         scoreText.text = "Score: " + score;
+    }
+    void UpdateHighScore()
+    {
+        if (PlayerPrefs.HasKey("SavedHighScore"))
+        {
+            if (score > PlayerPrefs.GetFloat("SavedHighScore"))
+            {
+                PlayerPrefs.SetFloat("SavedHighScore", score);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("SavedHighScore", score);
+        }
+        highScore = Mathf.FloorToInt(PlayerPrefs.GetFloat("SavedHighScore"));
+        highScoreText.text = "High Score: " + highScore;
     }
     void MovePlayer()
     {
@@ -67,6 +88,8 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
+        UpdateHighScore();
+        highScoreText.style.display = DisplayStyle.Flex;
         Destroy(gameObject);
     }
     void ReloadScene()
