@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject borderParent;
     public GameObject boosterFlame;
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour
         UpdateHighScore();
         highScoreText.style.display = DisplayStyle.Flex;
         Destroy(gameObject);
+        borderParent.SetActive(false);
     }
     void ReloadScene()
     {
